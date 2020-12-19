@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import './practice/random.dart';
+import './practice/http.dart';
+import './practice/http2.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,7 +59,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Randoms())),
-              )
+              ),
+              ListTile(
+                title: Text('Http github'),
+                leading: Icon(
+                  Icons.card_giftcard,
+                  size: 24,
+                  color: Colors.red,
+                ),
+                onTap: () => Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => HttpApp())),
+              ),
+              ListTile(
+                title: Text('Http inside'),
+                leading: Icon(
+                  Icons.card_giftcard,
+                  size: 24,
+                  color: Colors.red,
+                ),
+                onTap: () => Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => HttpTwo())),
+              ),
             ],
           ),
         ),
