@@ -3,6 +3,8 @@ import 'dart:math';
 import './practice/random.dart';
 import './practice/http.dart';
 import './practice/http2.dart';
+import './practice/http3.dart';
+import './practice/charts.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return random.nextInt(numss);
   }
 
+  List aa = ['lion'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,6 +82,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onTap: () => Navigator.push(context,
                     new MaterialPageRoute(builder: (context) => HttpTwo())),
+              ),
+              ListTile(
+                title: Text('Http three avatar'),
+                leading: Icon(
+                  Icons.card_giftcard,
+                  size: 24,
+                  color: Colors.red,
+                ),
+                onTap: () => Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => HttpThree())),
+              ),
+              ListTile(
+                title: Text('Http three avatar'),
+                leading: Icon(
+                  Icons.card_giftcard,
+                  size: 24,
+                  color: Colors.red,
+                ),
+                onTap: () => Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => DonutPieChart())),
               ),
             ],
           ),
