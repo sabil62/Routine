@@ -5,6 +5,7 @@ import './practice/http.dart';
 import './practice/http2.dart';
 import './practice/http3.dart';
 import './practice/charts.dart';
+import './practice/charts2.dart';
 
 void main() {
   runApp(MyApp());
@@ -105,6 +106,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     new MaterialPageRoute(
                         builder: (context) => DonutPieChart())),
               ),
+              ListTile(
+                  title: Text('Chart and Http'),
+                  leading: Icon(
+                    Icons.link_off,
+                    size: 24,
+                    color: Colors.blueAccent,
+                  ),
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ChartandHttp()))),
             ],
           ),
         ),
