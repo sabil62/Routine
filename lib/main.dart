@@ -6,6 +6,8 @@ import './practice/http2.dart';
 import './practice/http3.dart';
 import './practice/charts.dart';
 import './practice/charts2.dart';
+import './practice/datatable.dart';
+import './practice/datable2.dart';
 
 void main() {
   runApp(MyApp());
@@ -107,6 +109,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) => DonutPieChart())),
               ),
               ListTile(
+                title: Text('Data Table Main'),
+                leading: Icon(
+                  Icons.data_usage,
+                  size: 24,
+                  color: Colors.blue[800],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DataTables())),
+              ),
+              ListTile(
                   title: Text('Chart and Http'),
                   leading: Icon(
                     Icons.link_off,
@@ -115,6 +127,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   onTap: () => Navigator.push(context,
                       MaterialPageRoute(builder: (context) => ChartandHttp()))),
+              ListTile(
+                title: Text('Data Table'),
+                leading: Icon(
+                  Icons.trip_origin,
+                  size: 24,
+                  color: Colors.yellow[800],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => DataTableTwo())),
+              ),
             ],
           ),
         ),
