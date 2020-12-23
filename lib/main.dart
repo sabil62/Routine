@@ -10,6 +10,7 @@ import './practice/datatable.dart';
 import './practice/datable2.dart';
 import './practice/form.dart';
 import './practice/form2.dart';
+import './animation/flare1.dart';
 
 void main() {
   runApp(MyApp());
@@ -157,6 +158,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => FormAppTwo())),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              ListTile(
+                title: Text('Smiley animation'),
+                leading: Icon(
+                  Icons.change_history,
+                  size: 24,
+                  color: Colors.brown[800],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FlareApp())),
               ),
             ],
           ),
