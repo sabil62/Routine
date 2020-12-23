@@ -28,7 +28,7 @@ class _DataTableTwoState extends State<DataTableTwo> {
                     onSort: (a, b) {
                       setState(() {
                         friend.sort((a, b) => a.lastName.compareTo(b.lastName));
-                      });s
+                      });
                     }),
                 DataColumn(label: Text('Rating'))
               ],
