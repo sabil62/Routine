@@ -8,6 +8,8 @@ import './practice/charts.dart';
 import './practice/charts2.dart';
 import './practice/datatable.dart';
 import './practice/datable2.dart';
+import './practice/form.dart';
+import './practice/form2.dart';
 
 void main() {
   runApp(MyApp());
@@ -136,6 +138,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => DataTableTwo())),
+              ),
+              ListTile(
+                  title: Text('Form'),
+                  leading: Icon(
+                    Icons.no_cell_rounded,
+                    size: 24,
+                    color: Colors.yellowAccent,
+                  ),
+                  onTap: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FormApp()))),
+              ListTile(
+                title: Text('Form Two'),
+                leading: Icon(
+                  Icons.bolt,
+                  size: 24,
+                  color: Colors.orange[800],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FormAppTwo())),
               ),
             ],
           ),

@@ -22,7 +22,13 @@ class _FormAppState extends State<FormApp> {
             child: Column(
               children: [
                 buildName(),
+                SizedBox(
+                  height: 20,
+                ),
                 buildlastName(),
+                SizedBox(
+                  height: 20,
+                ),
                 RaisedButton(
                     child: Text('Submit'),
                     color: Colors.blueAccent[700],
@@ -46,7 +52,7 @@ class _FormAppState extends State<FormApp> {
         labelText: 'Please enter name',
       ),
       maxLength: 25,
-      validator: (String value) {
+      validator: (value) {
         if (value.isEmpty) {
           return 'enter name';
         }
@@ -64,7 +70,7 @@ class _FormAppState extends State<FormApp> {
     return TextFormField(
       decoration: InputDecoration(
           labelText: 'Please enter last name', hintText: 'tiger'),
-      validator: (String value) {
+      validator: (value) {
         if (value.isEmpty) {
           return 'Last name';
         }
