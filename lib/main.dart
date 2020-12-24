@@ -11,6 +11,8 @@ import './practice/datable2.dart';
 import './practice/form.dart';
 import './practice/form2.dart';
 import './animation/flare1.dart';
+import './practice/stream.dart';
+import './practice/stream2.dart';
 
 void main() {
   runApp(MyApp());
@@ -171,6 +173,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => FlareApp())),
+              ),
+              ListTile(
+                title: Text('Stream simple'),
+                leading: Icon(
+                  Icons.stream,
+                  size: 24,
+                  color: Colors.red[800],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StateApp())),
+              ),
+              ListTile(
+                title: Text('Stream http'),
+                leading: Icon(
+                  Icons.not_accessible_rounded,
+                  size: 24,
+                  color: Colors.orangeAccent[800],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StreamHttp())),
               ),
             ],
           ),
