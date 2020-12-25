@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timeTable/bloc/counter.dart';
+import 'package:timeTable/bloc/counter2.dart';
 import 'dart:math';
 import './practice/random.dart';
 import './practice/http.dart';
@@ -204,6 +205,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => CounterAppBloc())),
+              ),
+              ListTile(
+                title: Text('Counter Bloc pattern this!!'),
+                leading: Icon(
+                  Icons.not_accessible_rounded,
+                  size: 24,
+                  color: Colors.green[900],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CounterAppBloc2())),
               ),
             ],
           ),
