@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 
 class CounterState extends ChangeNotifier {
-  int _count = 0;
-  int get count => _count;
+  int count = 0;
+
   void increment() {
-    _count++;
+    count++;
     notifyListeners();
   }
 
   void decrement() {
-    _count--;
+    count--;
     notifyListeners();
   }
 }

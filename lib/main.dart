@@ -3,6 +3,7 @@ import 'package:timeTable/Provider2_littleComplex/counterOperations.dart';
 import 'package:timeTable/bloc/counter.dart';
 import 'package:timeTable/bloc/counter2.dart';
 import 'package:timeTable/provider/counterproperations.dart';
+import 'package:timeTable/provider/providerCounter.dart';
 import 'dart:math';
 import './practice/random.dart';
 import './practice/http.dart';
@@ -225,10 +226,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   size: 24,
                   color: Colors.deepOrange[900],
                 ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => CounterOperation())),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CounterProvider())),
               ),
               ListTile(
                 title: Text('Counter Bloc pattern this!!'),

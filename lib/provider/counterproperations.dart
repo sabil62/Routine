@@ -1,3 +1,5 @@
+//ignore this page for now
+
 import 'package:flutter/material.dart';
 import './counterState.dart';
 import 'package:provider/provider.dart';
