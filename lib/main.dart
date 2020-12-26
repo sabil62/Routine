@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:timeTable/Provider2_littleComplex/counterOperations.dart';
 import 'package:timeTable/bloc/counter.dart';
 import 'package:timeTable/bloc/counter2.dart';
+import 'package:timeTable/provider/counterproperations.dart';
 import 'dart:math';
 import './practice/random.dart';
 import './practice/http.dart';
@@ -209,12 +211,36 @@ class _MyHomePageState extends State<MyHomePage> {
               ListTile(
                 title: Text('Counter Bloc pattern this!!'),
                 leading: Icon(
-                  Icons.not_accessible_rounded,
+                  Icons.turned_in,
                   size: 24,
-                  color: Colors.green[900],
+                  color: Colors.brown[900],
                 ),
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => CounterAppBloc2())),
+              ),
+              ListTile(
+                title: Text('Counter Bloc pattern this!!'),
+                leading: Icon(
+                  Icons.sim_card_outlined,
+                  size: 24,
+                  color: Colors.deepOrange[900],
+                ),
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CounterOperation())),
+              ),
+              ListTile(
+                title: Text('Counter Bloc pattern this!!'),
+                leading: Icon(
+                  Icons.sim_card_outlined,
+                  size: 24,
+                  color: Colors.deepOrange[900],
+                ),
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => OperationCounterLittleSimple())),
               ),
             ],
           ),
