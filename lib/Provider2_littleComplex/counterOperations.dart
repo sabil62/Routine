@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 //this is here class
 import 'counterModel.dart';
 //this is the other class we have taken
-import '../Provider1_Simple/counterState.dart';
+//import '../Provider1_Simple/counterState.dart';
 
 class OperationCounterLittleSimple extends StatelessWidget {
   @override
@@ -33,10 +33,10 @@ class OperationCounterLittleSimple extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text(
-                        context.watch<Counters>().values.toString(),
-                        style: buildText(30),
-                      ),
+                      // Text(
+                      //   context.watch<Counters>().values.toString(),
+                      //   style: buildText(30),
+                      // ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -101,20 +101,19 @@ class OperationCounterLittleSimple extends StatelessWidget {
                       'ID',
                       style: buildTextBlack(30),
                     ),
-                    IconButton(
-                        icon: Icon(
-                          Icons.thumb_up,
-                          size: 40,
-                          color: Colors.green,
-                        ),
-                        onPressed: context.watch<Counters>().increment),
-                    IconButton(
-                        icon: Icon(
-                          Icons.thumb_down,
-                          size: 40,
-                          color: Colors.red,
-                        ),
-                        onPressed: context.watch<Counters>().decrement)
+
+                    Icon(
+                      Icons.thumb_up,
+                      size: 40,
+                      color: Colors.green,
+                    ),
+                    // onPressed: context.watch<Counters>().increment
+
+                    Icon(
+                      Icons.thumb_down,
+                      size: 40,
+                      color: Colors.red,
+                    ),
                   ],
                 ),
               ),
