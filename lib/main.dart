@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:timeTable/Provider2_littleComplex/counterOperations.dart';
+
 import 'package:timeTable/bloc/counter.dart';
 import 'package:timeTable/bloc/counter2.dart';
-import 'package:timeTable/provider/counterproperations.dart';
+
 import 'package:timeTable/provider/providerCounter.dart';
+
+import 'package:timeTable/provider2/salaryProvider.dart';
+import 'package:timeTable/provider3/playerOperation.dart';
+import 'package:timeTable/provider3/playerProvider.dart';
 import 'dart:math';
 import './practice/random.dart';
 import './practice/http.dart';
@@ -219,8 +223,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (context) => CounterAppBloc2())),
               ),
+              SizedBox(
+                height: 30,
+              ),
               ListTile(
-                title: Text('Counter Bloc pattern this!!'),
+                title: Text('Counter Provider (in provider)'),
                 leading: Icon(
                   Icons.sim_card_outlined,
                   size: 24,
@@ -230,16 +237,24 @@ class _MyHomePageState extends State<MyHomePage> {
                     MaterialPageRoute(builder: (context) => CounterProvider())),
               ),
               ListTile(
-                title: Text('Counter Bloc pattern this!!'),
+                title: Text('Salary Provider 2'),
                 leading: Icon(
-                  Icons.sim_card_outlined,
+                  Icons.tapas_rounded,
                   size: 24,
-                  color: Colors.deepOrange[900],
+                  color: Colors.brown[900],
                 ),
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => OperationCounterLittleSimple())),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SalProvider())),
+              ),
+              ListTile(
+                title: Text('Player Provider CLASSES used'),
+                leading: Icon(
+                  Icons.format_align_justify,
+                  size: 24,
+                  color: Colors.green[900],
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PlayerProvider())),
               ),
             ],
           ),
